@@ -26,7 +26,6 @@ export class DialogComponent implements OnInit, OnDestroy, OnChanges {
     }
 
     public action(): Promise<IDialogParams> {
-        console.log("dialog action", this.params);
         // init dialog
         if(this.params){
             this.params.preName ? this.nameStr = this.params.preName : null;
