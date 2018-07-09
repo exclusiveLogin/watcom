@@ -28,7 +28,6 @@ export class ItemComponent implements OnInit {
             preName: item.humanText,
         };
         this.dialog.openDialog(_dp).then((result: IDialogParams) => {
-            console.log("open dialog result: ", result);
             if (result.newValue) {
                 //delta detected
                 this.repo.setValue(this.itemParams.id, result.newValue);

@@ -24,7 +24,6 @@ export class DialogService {
 
     public openDialog(params?: IDialogParams): Promise<IDialogParams> {
         if ( this.dialogComponent ) {
-            console.log("opentDialog", params);
             if ( params ) {
                 (params.title && !params.title.titleMajor) ? params.title.titleMajor = '' : null;
                 (params.title && !params.title.titleMinor) ? params.title.titleMinor = '' : null;

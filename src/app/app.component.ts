@@ -10,12 +10,5 @@ export class AppComponent {
   title = 'app';
 
   constructor(
-      private dialog: DialogService,
-  ) {
-
-  }
-
-  public modalTest(): void {
-        this.dialog.openDialog();
-  }
+  ) {}
 }

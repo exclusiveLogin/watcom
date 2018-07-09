@@ -17,7 +17,8 @@ export class ContainerComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.items = this.repo.getItems(this.widgetIds)
+        this.repo.getItems$(this.widgetIds)
+            .subscribe(items => this.items = items);
     }
 
 }

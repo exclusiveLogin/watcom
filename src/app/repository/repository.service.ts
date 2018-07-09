@@ -20,16 +20,17 @@ const ITEM_REPO: IItem[] = [
 @Injectable()
 export class RepositoryService {
 
-    // private items: BehaviorSubject<IItem[]> = new BehaviorSubject<IItem[]>([]);
+    private items: BehaviorSubject<IItem[]> = new BehaviorSubject<IItem[]>([]);
 
     constructor() {
     }
 
-    /*private refresh(): void {
+    private refresh(): void {
         this.items.next(ITEM_REPO);
-    }*/
+    }
     public setHumanText(id: number, humantext: string): void {
         this.getItem(id) ? this.getItem(id).humanText = humantext : null;
+        this.refresh();
     }
 
     public getHumanText(id: number): string {
@@ -38,6 +39,7 @@ export class RepositoryService {
 
     public setValue(id: number, value: string): void {
         this.getItem(id) ? this.getItem(id).value = value : null;
+        this.refresh();
     }
 
     public getValue(id: number): string {
@@ -52,8 +54,8 @@ export class RepositoryService {
         return (ITEM_REPO[id]) ? ITEM_REPO[id] : null;
     }
 
-    /*public getItems$(ids: number[]): BehaviorSubject<IItem[]> {
+    public getItems$(ids: number[]): BehaviorSubject<IItem[]> {
         this.items.next(this.getItems(ids));
         return this.items;
-    }*/
+    }
 }
