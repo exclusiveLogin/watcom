@@ -1,0 +1,13 @@
+.item{
+    width: 200px;
+    margin: 10px;
+    border: 1px cornflowerblue solid;
+    flex: 1 1 auto;
+    padding: 15px 20px;
+    text-align: center;
+}
+h1{
+    font-size: 10pt;
+    color: #2F80ED;
+    font-family: Arial;
+}

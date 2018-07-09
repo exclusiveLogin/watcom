@@ -4,19 +4,24 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {ContainerComponent} from './container/container.component';
-import {ModalModule} from './modal/modal.module';
+import {DialogModule} from './modal/dialog.module';
+import {RepositoryService} from './repository/repository.service';
+import {ItemComponent} from './container/item/item.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        ContainerComponent
+        ContainerComponent,
+        ItemComponent
     ],
     imports: [
         BrowserModule,
-        ModalModule,
+        DialogModule,
     ],
-    providers: [],
+    providers: [
+        RepositoryService,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

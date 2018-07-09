@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DialogService} from './modal/dialog.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(
+      private dialog: DialogService,
+  ) {
+
+  }
+
+  public modalTest(): void {
+        this.dialog.openDialog();
+  }
 }

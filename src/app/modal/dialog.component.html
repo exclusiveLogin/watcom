@@ -1,0 +1,35 @@
+<div class="b3-fullscreen b3-fullscreen_dark" *ngIf="show">
+    <div class="b3-dialog">
+        <div class="b3-card">
+            <div class="b3-card-head">
+                <span class="icon"
+                      [ngClass] = "params?.icon">
+                </span>
+                <div class="b3-title-group">
+                    <h2 class="b3-title_minor">{{params?.title?.titleMinor}}</h2>
+                    <h3 class="b3-title_major">{{params?.title?.titleMajor}}</h3>
+                </div>
+            </div>
+
+            <div class="b3-card-content">
+                <label for="paramName">Имя параметра</label>
+                <input type="text" id="paramName" [(ngModel)]="nameStr">
+                <label for="paramValue">Значение параметра</label>
+                <input type="text" id="paramValue" [(ngModel)]="valueStr">
+            </div>
+
+            <div class="b3-btn-group">
+                <button class="b3-btn-group__btn b3-btn b3-btn_default" type="button"
+                    (click)= "cancelDialog()"
+                >
+                    {{params?.cancelBtnText || 'Отмена'}}
+                </button>
+                <button class="b3-btn-group__btn b3-btn b3-btn_primary" type="button"
+                    (click)="submitDialog()"
+                >
+                    {{params?.submitBtnText || 'Подтвердить'}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

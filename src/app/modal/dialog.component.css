@@ -1,0 +1,96 @@
+.b3-fullscreen.b3-fullscreen_dark {
+    background: rgba(9, 10, 13, 0.9);
+}
+
+.b3-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    z-index: 1000;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.b3-dialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin: auto;
+    height: 240px;
+    width: 357px;
+}
+
+.b3-dialog .b3-card {
+    border-radius: 0 3px 5px 0;
+    border-left: 7px solid #313541;
+    padding: 8px 0 0;
+    background: #ffffff;
+}
+
+.b3-dialog .b3-card-head {
+    margin: 0 0 34px;
+}
+
+.b3-dialog .b3-card-content {
+    padding: 0 20px 20px;
+    text-align: right;
+}
+
+.b3-dialog .b3-btn-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.b3-dialog .b3-btn-group .b3-btn_primary {
+    background: #2F80ED;
+}
+
+.b3-dialog .b3-btn-group .b3-btn {
+    width: 100%;
+}
+
+.b3-btn-group__btn {
+    padding: 0;
+    height: 41px;
+    line-height: 41px;
+    text-transform: uppercase;
+}
+
+.b3-btn_primary {
+    background: #28BD8B;
+    color: #ffffff;
+}
+
+.b3-btn {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 0;
+    border-radius: 0;
+    -webkit-transition: color .2s linear, width .2s linear, background-color .2s linear;
+    transition: color .2s linear, width .2s linear, background-color .2s linear;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-decoration: none;
+    cursor: pointer;
+}
